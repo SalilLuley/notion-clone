@@ -44,7 +44,8 @@ const Navbar = (props: Props) => {
         {isAuthenticated && !isLoading && (
           <>
             <Button variant={"ghost"} size={"sm"}>
-              <Link href={"./documents"}>Enter Notes</Link>
+              <Link href="./documents"></Link>
+              Enter Notes
             </Button>
             <UserButton afterSignOutUrl="/"></UserButton>
           </>
