@@ -7,7 +7,7 @@ type Props = {};
 
 const MarketingPage = (props: Props) => {
   return (
-    <div className="min-h-full flex flex-col">
+    <div className="min-h-full flex flex-col dark:bg-[#1F1F1F]">
       <div
         className="flex
         flex-col

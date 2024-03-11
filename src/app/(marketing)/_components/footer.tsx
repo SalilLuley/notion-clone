@@ -12,7 +12,9 @@ const Footer = (props: Props) => {
       items-center 
       w-full 
       p-6 
-      z-50"
+      z-50
+      pb-2
+      dark:bg-[#1F1F1F]"
     >
       <Logo />
       <div
@@ -21,7 +23,8 @@ const Footer = (props: Props) => {
         md:justify-end 
         flex items-center 
         gap-x-2
-        text-muted-foreground"
+        text-muted-foreground
+        "
       >
         <Button variant={"ghost"} size={"sm"}>
           Privacy Policy

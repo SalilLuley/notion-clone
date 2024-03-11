@@ -18,7 +18,13 @@ const Heros = (props: Props) => {
           src="/documents.png"
           alt="Documents"
           fill
-          className="object-contain"
+          className="object-contain dark:hidden"
+        ></Image>
+        <Image
+          src="/documents-dark.png"
+          alt="Documents"
+          fill
+          className="object-contain hidden dark:block"
         ></Image>
       </div>
 
@@ -27,7 +33,14 @@ const Heros = (props: Props) => {
           src="/reading.png"
           alt="Reading"
           fill
-          className="object-contain"
+          className="object-contain 
+          dark:hidden"
+        ></Image>
+        <Image
+          src="/reading-dark.png"
+          alt="Reading"
+          fill
+          className="object-contain hidden dark:block"
         ></Image>
       </div>
     </div>
