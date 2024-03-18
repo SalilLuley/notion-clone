@@ -14,13 +14,14 @@ import { useMutation, useQuery } from "convex/react";
 import { api } from "../../../../convex/_generated/api";
 import Item from "./item";
 import { toast } from "sonner";
+import DocumentList from "./document-list";
 
 type Props = {};
 
 const Navigation = (props: Props) => {
   const pathName = usePathname();
   const isMobile = useMediaQuery("(max-width: 768px)");
-  const documents = useQuery(api.documents.get);
+
   const create = useMutation(api.documents.create);
   const isResizing = useRef(false);
   const sideBarRef = useRef<ElementRef<"aside">>(null);
@@ -149,11 +150,9 @@ const Navigation = (props: Props) => {
           <Item onClick={handleCreateNote} label="New Page" icon={PlusCircle} />
           <Item label={"Settings"} onClick={() => {}} icon={Settings}></Item>
         </div>
-        <div className="mt-4">
+        <div className="">
           <p>
-            {documents?.map((document) => (
-              <p key={document._id}>{document.title}</p>
-            ))}
+            <DocumentList></DocumentList>
           </p>
         </div>
         <div
